@@ -5,7 +5,7 @@ def load_library(path)
 end
 
 def get_japanese_emoticon(emoticon)
-  hash = load_library("emoticons.yml")
+  hash = load_library("./lib/emoticons.yml")
   hash.each do |meaning, symbols|
     if symbols[0] === emoticon
       return symbols[1]
