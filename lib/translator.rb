@@ -20,5 +20,8 @@ end
 
 def get_english_meaning(path, emoticon)
   hash = load_library(path)
-  return hash[:get_emoticon][emoticon]
+  if hash[:get_meaning][emoticon]
+    return hash[:get_meaning][emoticon]
+  end
+  return "Sorry, that emoticon was not found"    
 end
